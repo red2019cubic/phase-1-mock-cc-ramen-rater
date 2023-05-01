@@ -39,6 +39,30 @@
       "image": "./assets/ramen/kojiro.jpg",
       "rating": 6,
       "comment": "Perfect for a cold night."
-    }   
+    },
+    {
+      "name": "Roasted Chicken",
+      "restaurant": "Panda",
+      "image": "https://media.istockphoto.com/id/1402827315/photo/fresh-halved-cut-limes.jpg?s=1024x1024&w=is&k=20&c=yzYaw_kJ_Up7vmVuoQT7Nn2JQ_3zjkbNf1QdjOWdeO4=",
+      "rating": "",
+      "comment": "",
+      "id": 6
+    },
+    {
+      "name": "Meat Lover ",
+      "restaurant": "Long Horn",
+      "image": "https://media.istockphoto.com/id/1402827315/photo/fresh-halved-cut-limes.jpg?s=1024x1024&w=is&k=20&c=yzYaw_kJ_Up7vmVuoQT7Nn2JQ_3zjkbNf1QdjOWdeO4=",
+      "rating": "4",
+      "comment": "",
+      "id": 7
+    },
+    {
+      "name": "Meat Lover ",
+      "restaurant": "Long Horn",
+      "image": "https://www.foodiesfeed.com/wp-content/uploads/2019/06/top-view-for-box-of-2-burgers-home-made.jpg",
+      "rating": "4",
+      "comment": "",
+      "id": 8
+    }
   ]
 }

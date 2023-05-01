@@ -58,33 +58,43 @@ function populateForm() {
   ramenForm.addEventListener("submit", function (e) {
     e.preventDefault();
 
-    const newRating = document.querySelector("#rating").value;
-    const newComment = document.querySelector("#comment").value;
+    const newRating = document.querySelector("#new-rating").value;
+    const newComment = document.querySelector("#new-comment").value;
+    const name = document.querySelector("#new-name").value;
+    const restaurant = document.querySelector("#new-restaurant").value;
+    const img = document.querySelector("#new-image").value;
 
     const newRamen = {
-      id: parseInt(ramenForm.dataset.id),
+      name: name,
+      restaurant: restaurant,
+      image: img,
       rating: newRating,
       comment: newComment,
     };
-
+    console.log(newRamen);
     updateRamen(newRamen);
-    e.target.reset();
   });
 }
 
 function updateRamen(newRamen) {
-  fetch(`http://localhost:3000/ramens/${newRamen.id}`, {
-    method: "PATCH",
+  fetch("http://localhost:3000/ramens", {
+    method: "POST",
     headers: {
       "Content-Type": "application/json",
+      Accept: "application/json",
     },
     body: JSON.stringify(newRamen),
   })
     .then((response) => response.json())
     .then((newRamen) => {
-      const rating = document.querySelector("#new-rating");
-      const comment = document.querySelector("#new-comment");
-      ratingInput.textContent = newRamen.value;
-      commentInput.textContent = newRamen.value;
+      const newRating = document.querySelector("#new-rating").value;
+      const newComment = document.querySelector("#new-comment").value;
+      const name = document.querySelector("#new-name").value;
+      const restaurant = document.querySelector("#new-restaurant").value;
+      const img = document.querySelector("#new-image").value;
+
+      const image = document.createElement("img");
+      const div = document.querySelector("#ramen-menu");
+      div.appendChild(image);
     });
 }
